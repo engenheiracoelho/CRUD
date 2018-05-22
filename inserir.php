@@ -4,14 +4,12 @@
   <meta charset="utf-8">
 </head>
 <body>
-  <h1>Olá Mundo</h1>
-  <hr>
-  <?php
-      echo "<P> Aula PHP";
-      $a=10;
-      $b=20;
-      $resultado= $a+$b;
-      echo "<p> Resultado:$resultado"
-  ?>
+  <h1>Cadastrar contato</h1>
+  <form action="c.php" method="post">
+    <p>Nome:
+    <br><input type="text" name="Nome" />
+    <p>Email:
+    <br><input type="text" name="Email" />
+    <input type="submit" value="Cadastrar" />
 </body>
 </html>
