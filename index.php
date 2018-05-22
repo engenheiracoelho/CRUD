@@ -6,12 +6,8 @@
 <body>
   <h1>Olá Mundo</h1>
   <hr>
-  <?php
-      echo "<P> Aula PHP";
-      $a=10;
-      $b=20;
-      $resultado= $a+$b;
-      echo "<p> Resultado:$resultado"
-  ?>
+      <p><a href="inserir.php">Inserir</p>
+      <p><a href="listar.php">Listar</p>
+      <p><a href="encontrar.php">Inserir</p>
 </body>
 </html>
