@@ -24,7 +24,7 @@
         $resultado = $con->query($consulta);
 
         while($linha = $resultado->fetch_assoc()){
-            printf("<tr>\n<td>%s</td>\n<td>%s</td>\n<td>%s</td></tr>",$linha['ID'],$linha['Nome'],$linha['Email']);
+            printf("<tr>\n<td><a href='editar.php?id=%s'>%s</td>\n<td>%s</td>\n<td>%s</td></tr>",$linha['ID'],$linha['ID'],$linha['Nome'],$linha['Email']);
         }
       }
     ?>
