@@ -20,7 +20,7 @@
 <body>
   <h1>Atualizar contato</h1>
   <form action="e.php" method="post">
-  <input type="hidden" name="id" value "<?php echo $id; ?>" />
+  <input type="hidden" name="id" value="<?php echo $id; ?>" />
     <p>Nome:
     <br><input type="text" name="Nome" value="<?php echo $nome; ?>" />
     <p>Email:
