@@ -20,14 +20,19 @@
     <?php
       $con = conexao();
       if ($con){
-        $consulta = "SELECT * FROM contato";
-        $resultado = $con->query($consulta);
+        $nome=$_POST['Nome'];
+        $consulta = "SELECT * FROM contato c where c.Nome=?";
+
+        $stmt=$con->prepare($consulta);
+        $stmt->bind_param("s",$nome);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
 
         while($linha = $resultado->fetch_assoc()){
-            printf("<tr>\n<td><a href='editar.php?id=%s'>%s</td>\n<td>%s</td>\n<td>%s</td></tr>",$linha['ID'],$linha['Nome'],$linha['Email']);
+            printf("<tr>\n<td>%s</td>\n<td>%s</td>\n<td>%s</td></tr>",$linha['ID'],$linha['ID'],$linha['Nome'],$linha['Email']);
         }
       }
-  ?>
+    ?>
   </table>
 </body>
 </html>
